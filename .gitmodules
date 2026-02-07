@@ -1,7 +1,7 @@
 [submodule "godot-cpp"]
 	path = godot-cpp
 	url = https://github.com/godotengine/godot-cpp.git
-	branch = 4.6
+	branch = master
 [submodule "ffmpeg"]
 	path = src/ffmpeg
 	url = https://git.ffmpeg.org/ffmpeg.git
