@@ -57,7 +57,13 @@ jobs:
         if: ${{ matrix.target.platform == 'linux' && matrix.target.arch == 'x86_32' }}
         run: |
           sudo apt-get update && sudo apt-get install -y gcc-multilib g++-multilib nasm
+      
+      - name: Install nasm
+        if: ${{ matrix.target.platform == 'linux' && matrix.target.arch == 'x86_64' }}
+        run: |
+          sudo apt-get update && sudo apt-get install -y nasm
 
+      
       # Setup dependencies
       - name: Setup godot-cpp
         uses: ./godot-cpp/.github/actions/setup-godot-cpp
